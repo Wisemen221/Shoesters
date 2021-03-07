@@ -1,1 +1,64 @@
 //navbar
+.header
+    // position: fixed
+    // top: 0
+    // left: 0
+    // z-index: 100
+    width: 100vw
+    background-color: $red_background
+    &_nav
+        // border: 5px solid blue
+        @include max_width($n1316)
+        @include min_width($n300)
+        width: 100%
+        margin: 0 auto
+        padding: $n31 $n13
+    &_logo //website logo
+        // border: 5px solid yellow
+    &_mobile_toggle //mobiel menu button
+        // border: 5px solid green
+        @include breakpoint-up(sm)
+            display: none
+        > span
+            display: block
+            transform: rotate(45deg)
+            border-radius: $n5
+            margin-bottom: $n3
+            background-color: $white_background
+            @include trans(0.4s)
+            &:first-child
+                transform-origin: -$n9 $n10
+                width: $n13
+                height: $n3
+            &:nth-child(2)
+                transform-origin: $n10 $n3
+                width: $n26
+                height: $n3
+            &:last-child
+                transform-origin: $n20 $n15
+                width: $n6
+                height: $n3
+
+    &_open //this animates the mobile menu button when clicked
+        > span:first-child
+            transform-origin: $n11_5 $n6
+            transform: rotate(136deg)
+            width: $n26
+        > span:nth-child(2)
+            transform-origin: $n10 $n3
+        > span:last-child
+            transform-origin: $n10 $n3
+            opacity: 0
+    
+    &_social_links //social media links facebook and instagram
+        // border: 5px solid purple
+        @include breakpoint-down(xs)
+            display: none
+        a
+            color: white
+            &:first-child
+                font-size: $n17
+            &:last-child
+                font-size: $n18
+            &:not(:first-child)
+                margin-left: $n8
