@@ -1,10 +1,14 @@
 <template>
+    <Nav />
     Home
 </template>
 
 <script>
+    import Nav from "@/components/Nav"
+
     export default {
-        name: 'Home'
+        name: 'Home',
+        components:{Nav}
     }
 </script>
 
