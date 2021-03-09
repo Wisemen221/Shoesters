@@ -32,17 +32,18 @@ hero******
                     <h1>Purveyors of Comfortable<br>Luxury Footwear</h1>
                     <!-- nav links for desktop only -->
                     <!-- animated nav section with gsap animations -->
-                    <nav class="hero_links">
-                        <div class="left_nav">
+                    <nav class="hero_links flex flex_jc_c">
+                        <div @mouseleave="closeNav" @mouseenter="openNav" class="left_nav">
                             <ul>
+                                <!-- using gsap to animate the nav -->
                                 <li><a href="#">HOME</a></li>
-                                <li><a href="#">ABOUT</a></li>
+                                <li class="link2"><a href="#">ABOUT</a></li>
                             </ul>
                         </div>
-                        <div class="right_nav"> <!-- animated border that splits the nav -->
+                        <div @mouseleave="closeNav" @mouseenter="openNav" class="right_nav"> <!-- animated border that splits the nav -->
                             <ul>
-                                <li><a href="#">CAREERS</a></li>
-                                <li><a href="#">CONTACT</a></li>
+                                <li class="link1"><a href="#">CAREERS</a></li>
+                                <li class="link3"><a href="#">CONTACT</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -52,6 +53,7 @@ hero******
                 <div class="hero_image">
                     <!-- the boot -->
                     <img src="@/assets/images/png/shoe_11.png" aria-label="A single blue boot" alt="One single boot">
+                    <div class="shadow"></div>
                 </div>
             </div>
             <!-- bottom border -->
@@ -64,14 +66,15 @@ hero******
 
 <script>
     import Nav from "@/components/Nav"
-    import { ref } from 'vue'
+    import { onMounted, ref } from 'vue'
+    import { gsap, Back } from "gsap"
 
     export default {
         name: 'Home',
         components:{Nav},
         setup(props,context){
             const scrolling_element = ref(null) //scroll wrapper element that is being scrolled by user
-            const change_color = ref(false) //variable that's passed to nav component for background change
+            const change_color = ref(true) //variable that's passed to nav component for background change
             const toggled = ref(false)
             const toggleLayover = ()=>{ //allows mobile menu to open
                 toggled.value = true
@@ -88,7 +91,23 @@ hero******
                     change_color.value = true
                 }
             }
-            return{toggled,toggleLayover,layoverToggle,scrolling,scrolling_element,change_color}
+            //using gsap to animate nav on the desktop
+            let tl = gsap.timeline({defaults:{ease: Back.easeOut.config(1)}})
+            const pauseTimeLine = onMounted(()=>{ //setup the gsap animation and pauses it
+                tl.paused(true)
+                tl.to(".left_nav",{duration: 0.7, height: 100})
+                .to(".right_nav",{duration: 0.7, height: 100},"-=0.7")
+                .to(".link1",{x: 0, opacity: 1},"-=0.5")
+                .to(".link2",{x: 0, opacity: 1},"-=0.4")
+                .to(".link3",{x: 0, opacity: 1},"-=0.3")
+            })
+            const openNav = ()=>{ //run the open nav animation using gsap
+                tl.play()
+            }
+            const closeNav = ()=>{ //run the close nav animation using gsap
+                tl.reverse()
+            }
+            return{toggled,toggleLayover,layoverToggle,scrolling,scrolling_element,change_color,openNav,closeNav,pauseTimeLine}
         },
     }
 </script>

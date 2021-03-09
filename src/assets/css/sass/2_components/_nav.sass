@@ -5,13 +5,17 @@
     left: 0
     width: 100vw
     z-index: 100
+    @include trans(0.3s)
+    
     &_nav
         @include max_width($n1316)
         @include min_width($n300)
         width: 100%
         margin: 0 auto
         padding: $n31 $n13
+    
     &_logo //website logo
+
     &_mobile_toggle //mobiel menu button
         @include breakpoint-up(sm) //shows the mobile menu on mobile devices
             display: none
@@ -57,9 +61,9 @@
                 font-size: $n18
             &:not(:first-child)
                 margin-left: $n8
+                
 .no_background
     background-color: transparent //when user scrolls to the top of the page the top nav is transparent
-    @include trans(0.3s)
+
 .red_background
     background-color: $red_background //when user scrolls down the top nav is red
-    @include trans(0.3s)

@@ -5,7 +5,9 @@
     height: 100vh
     background: linear-gradient($red_background, $yellow_background)
     padding-top: $n160
+    
     &_content
+    
     &_nav
         text-align: center
         color: $white_text
@@ -13,23 +15,96 @@
             font-size: $n25
             line-height: 1.6
             margin-bottom: $n22
+            @include trans(0.3s)
+            @include breakpoint-up(sm) //increase title size as screen gets bigger
+                font-size: $n40
+    
     &_links //nav links for desktop
+        margin-bottom: $n20 //space between the contact button link
         @include breakpoint-down(xs) //hides the nav in the hero section on mobile devices
             display: none
-    &_button
+        div
+            width: $n118
+            height: $n28
+            font-size: $n20
+            font-weight: bold
+            overflow: hidden
+            li
+                position: relative
+                a
+                    color: $white_text
+        .left_nav //left side of the animated nav
+            border-right: $n1 solid $white_background
+            padding-right: $n18
+            text-align: right
+            li
+                &::before //the white line that animates accross the nav links
+                    position: absolute
+                    top: $n8
+                    right: 0
+                    content: ''
+                    height: $n4
+                    width: 0
+                    background-color: $white_background
+                    @include trans(0.3s)
+                &:hover
+                    &::before
+                        width: 50% //animates the white line
+                &:nth-child(1)
+                    margin-top: $n4
+                &:nth-child(2)
+                    margin-top: $n27
+                    opacity: 0
+                    transform: translateX($n100)
+        .right_nav //right side of the animated nav
+            border-left: $n1 solid $white_background
+            padding-left: $n18
+            text-align: left
+            li
+                &::before //the white line that animates accross the nav links
+                    position: absolute
+                    top: $n8
+                    left: 0
+                    content: ''
+                    height: $n4
+                    width: 0
+                    background-color: $white_background
+                    @include trans(0.3s)
+                &:hover
+                    &::before
+                        width: 50% //animates the white line
+                &:nth-child(1)
+                    margin-top: $n27
+                    opacity: 0
+                    transform: translateX(-$n100)
+                &:nth-child(2)
+                    margin-top: $n27
+                    opacity: 0
+                    transform: translateX(-$n100)
+
+    &_button //contact button link
         background-color: $white_background
         border-radius: $n20
+        padding: $n7 $n20
         color: $orange_text
         font-size: $n15
         font-weight: bold
-        padding: $n7 $n20
+    
     &_image //the image of the boot
-        max-width: $n168
+        @include max_width($n168)
         width: 100%
         margin: $n46 auto 0 auto
         img
             width: 100%
             margin: 0 auto
+        .shadow //shadow that is under the boot
+            border-radius: 50%
+            filter: blur($n3)
+            width: 90%
+            margin: $n7 auto 0 auto
+            height: $n5
+            background-color: rgba(0,0,0,0.3)
+ 
     &_border //curvy white border
         position: absolute
         bottom: 0
