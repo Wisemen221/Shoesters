@@ -1,5 +1,37 @@
 //hero
-.hero_container
+.hero
+    position: relative
     width: 100vw
     height: 100vh
     background: linear-gradient($red_background, $yellow_background)
+    padding-top: $n160
+    &_content
+    &_nav
+        text-align: center
+        color: $white_text
+        h1
+            font-size: $n25
+            line-height: 1.6
+            margin-bottom: $n22
+    &_links //nav links for desktop
+        @include breakpoint-down(xs) //hides the nav in the hero section on mobile devices
+            display: none
+    &_button
+        background-color: $white_background
+        border-radius: $n20
+        color: $orange_text
+        font-size: $n15
+        font-weight: bold
+        padding: $n7 $n20
+    &_image //the image of the boot
+        max-width: $n168
+        width: 100%
+        margin: $n46 auto 0 auto
+        img
+            width: 100%
+            margin: 0 auto
+    &_border //curvy white border
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%

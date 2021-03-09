@@ -1,15 +1,37 @@
 //layover
-.layover_container
-    position: absolute
-    top: 0
+.layover
+    position: fixed //place the layover menu over all content
+    top: $n84 //allows top nav to be displayed and not have the layover cover it
     left: 0
     bottom: 0
     right: 0
-    background-color: green
+    background: linear-gradient(rgba(0,0,0,1), rgba(255,255,255,0.8))
     width: 100vw
     height: 100vh
-    z-index: 100
-    animation: fade_in 0.4s ease-in-out forwards
-
-    &_close
-        animation: fade_out 0.4s ease-in-out forwards
+    padding: $n100 $n10
+    text-align: center
+    z-index: 100 //allows the layover to overlap all content
+    animation: fade_in 0.4s ease-in-out forwards //fades the layover into view
+    > a
+        display: block
+        border-radius: $n20
+        margin: 0 auto //center the links
+        font-weight: bold
+        font-size: $n20
+        color: $white_text
+        opacity: 0
+        transform: translateY(-$n100)
+        //animates the links to fly from top of view
+        &:nth-last-child(1)
+            animation: fly_down 0.4s ease-in-out forwards
+        &:nth-last-child(2)
+            animation: fly_down 0.4s ease-in-out forwards
+            animation-delay: 0.1s
+        &:nth-last-child(3)
+            animation: fly_down 0.4s ease-in-out forwards
+            animation-delay: 0.2s
+        &:nth-last-child(4)
+            animation: fly_down 0.4s ease-in-out forwards
+            animation-delay: 0.3s
+        &:not(:first-child)
+            margin-top: $n30
