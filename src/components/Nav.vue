@@ -12,7 +12,6 @@ header******
             </a>
             <!-- mobile menu button -->
             <a href="#" ref="mobileToggle" @click="toggleOn" class="header_mobile_toggle">
-                <!-- using the span elements to create the mobile menu design -->
                 <span></span>
                 <span></span>
                 <span></span>

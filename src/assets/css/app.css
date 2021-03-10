@@ -134,7 +134,26 @@ ul {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF4000), to(#ECC990));
   background: linear-gradient(#FF4000, #ECC990);
-  padding-top: 10rem;
+}
+
+@media (min-width: 75em) {
+  .hero {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 75em) {
+  .hero_content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .hero_nav {
@@ -183,7 +202,7 @@ ul {
 }
 
 .hero_links .left_nav {
-  border-right: 0.0625rem solid #ffffff;
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.8);
   padding-right: 1.125rem;
   text-align: right;
 }
@@ -216,7 +235,7 @@ ul {
 }
 
 .hero_links .right_nav {
-  border-left: 0.0625rem solid #ffffff;
+  border-left: 0.0625rem solid rgba(255, 255, 255, 0.8);
   padding-left: 1.125rem;
   text-align: left;
 }
@@ -264,6 +283,21 @@ ul {
   max-width: 10.5rem;
   width: 100%;
   margin: 2.875rem auto 0 auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 34.375em) {
+  .hero_image {
+    max-width: 15.625rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .hero_image {
+    max-width: 18.75rem;
+    margin: 0 0 0 1.875rem;
+  }
 }
 
 .hero_image img {

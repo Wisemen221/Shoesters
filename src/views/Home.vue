@@ -7,13 +7,11 @@ nav******
 <!--
 scroll wrappper******
 -->
-    <!-- containing everything in webpage in order for the user to scroll. For some reason a fixed navbar will not work in Vue 3 -->
     <div ref="scrolling_element" @scroll="scrolling" class="scroll_wrapper">
 
 <!--
 layover******
 -->
-        <!-- mobile menu that appears for mobile devices -->
         <div class="layover" v-if="toggled">
             <a href="#">HOME</a>
             <a href="#">ABOUT</a>
@@ -24,40 +22,37 @@ layover******
 <!-- 
 hero******
 -->
-        <!-- the landing page -->
-        <section class="hero">
-            <div class="hero_content">
+        <section class="hero flex flex_dr_c flex_jc_c">
+            <div class="hero_content flex flex_dr_c">
                 <!-- contains the nav and image content -->
                 <div class="hero_nav">
                     <h1>Purveyors of Comfortable<br>Luxury Footwear</h1>
                     <!-- nav links for desktop only -->
-                    <!-- animated nav section with gsap animations -->
                     <nav class="hero_links flex flex_jc_c">
                         <div @mouseleave="closeNav" @mouseenter="openNav" class="left_nav">
                             <ul>
-                                <!-- using gsap to animate the nav -->
                                 <li><a href="#">HOME</a></li>
                                 <li class="link2"><a href="#">ABOUT</a></li>
                             </ul>
                         </div>
-                        <div @mouseleave="closeNav" @mouseenter="openNav" class="right_nav"> <!-- animated border that splits the nav -->
+                        <div @mouseleave="closeNav" @mouseenter="openNav" class="right_nav">
                             <ul>
                                 <li class="link1"><a href="#">CAREERS</a></li>
                                 <li class="link3"><a href="#">CONTACT</a></li>
                             </ul>
                         </div>
                     </nav>
-                    <!-- button link that goes to the contact section -->
+                    <!-- contact button -->
                     <a class="hero_button" href="#">LET'S TALK</a>
                 </div>
                 <div class="hero_image">
                     <!-- the boot -->
-                    <img src="@/assets/images/png/shoe_11.png" aria-label="A single blue boot" alt="One single boot">
+                    <img src="@/assets/images/png/shoe_11.png" aria-label="A single blue boot" alt="One single boot" loading="eager">
                     <div class="shadow"></div>
                 </div>
             </div>
-            <!-- bottom border -->
-            <img class="hero_border" src="@/assets/images/svg/border_1.svg" role="presentation">
+            <!-- border bottom -->
+            <img class="hero_border" src="@/assets/images/svg/border_1.svg" role="presentation" loading="eager">
         </section>
 
     </div>

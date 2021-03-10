@@ -4,24 +4,28 @@
     width: 100vw
     height: 100vh
     background: linear-gradient($red_background, $yellow_background)
-    padding-top: $n160
+    @include breakpoint-up(md) //aligns the nav and boot image center of page
+        justify-content: center
     
-    &_content
-    
-    &_nav
+    &_content //parent of nav and boot image
+        @include breakpoint-up(md) //vertically aligns childred
+            flex-direction: row
+            justify-content: center
+
+    &_nav //parent of navigation
         text-align: center
         color: $white_text
         h1
             font-size: $n25
             line-height: 1.6
-            margin-bottom: $n22
+            margin-bottom: $n22 //spacing
             @include trans(0.3s)
-            @include breakpoint-up(sm) //increase title size as screen gets bigger
+            @include breakpoint-up(sm) //increase the h1 font size
                 font-size: $n40
     
     &_links //nav links for desktop
-        margin-bottom: $n20 //space between the contact button link
-        @include breakpoint-down(xs) //hides the nav in the hero section on mobile devices
+        margin-bottom: $n20 //puts space between the fixed navbar and the contact button
+        @include breakpoint-down(xs) //hides the navigation on mobile
             display: none
         div
             width: $n118
@@ -34,8 +38,8 @@
                 a
                     color: $white_text
         .left_nav //left side of the animated nav
-            border-right: $n1 solid $white_background
-            padding-right: $n18
+            border-right: $n1 solid rgba(255,255,255,0.8)
+            padding-right: $n18 //spacing
             text-align: right
             li
                 &::before //the white line that animates accross the nav links
@@ -49,16 +53,16 @@
                     @include trans(0.3s)
                 &:hover
                     &::before
-                        width: 50% //animates the white line
+                        width: 50%
                 &:nth-child(1)
-                    margin-top: $n4
+                    margin-top: $n4 //spacing
                 &:nth-child(2)
-                    margin-top: $n27
+                    margin-top: $n27 //spacing
                     opacity: 0
                     transform: translateX($n100)
         .right_nav //right side of the animated nav
-            border-left: $n1 solid $white_background
-            padding-left: $n18
+            border-left: $n1 solid rgba(255,255,255,0.8)
+            padding-left: $n18 //spacing
             text-align: left
             li
                 &::before //the white line that animates accross the nav links
@@ -72,17 +76,17 @@
                     @include trans(0.3s)
                 &:hover
                     &::before
-                        width: 50% //animates the white line
+                        width: 50%
                 &:nth-child(1)
-                    margin-top: $n27
+                    margin-top: $n27 //spacing
                     opacity: 0
                     transform: translateX(-$n100)
                 &:nth-child(2)
-                    margin-top: $n27
+                    margin-top: $n27 //spacing
                     opacity: 0
                     transform: translateX(-$n100)
 
-    &_button //contact button link
+    &_button //contact button
         background-color: $white_background
         border-radius: $n20
         padding: $n7 $n20
@@ -90,14 +94,20 @@
         font-size: $n15
         font-weight: bold
     
-    &_image //the image of the boot
+    &_image //parent of the boot image
         @include max_width($n168)
         width: 100%
-        margin: $n46 auto 0 auto
+        margin: $n46 auto 0 auto //spacing
+        @include trans(0.3s)
+        @include breakpoint-up(sm) //increase the boot image on meduim screens
+            @include max_width($n250)
+        @include breakpoint-up(md) //increase the boot image on slightly larger screens
+            @include max_width($n300)
+            margin: 0 0 0 $n30 //take margin away to be besides it's sibling
         img
             width: 100%
             margin: 0 auto
-        .shadow //shadow that is under the boot
+        .shadow //shadow under the boot image
             border-radius: 50%
             filter: blur($n3)
             width: 90%
@@ -105,7 +115,7 @@
             height: $n5
             background-color: rgba(0,0,0,0.3)
  
-    &_border //curvy white border
+    &_border //curvy white bottom border
         position: absolute
         bottom: 0
         left: 0

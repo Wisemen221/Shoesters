@@ -1,22 +1,22 @@
 //global mixins
 
-//media queiry map using em units
-//550px
-$breakpoints-up: ('sm': '34.375em')
+//map
+//550px, 1200px
+$breakpoints-up: ('sm': '34.375em','md': '75em')
 
 //549px
 $breakpoints-down: ('xs': '34.3125em')
 
-@mixin breakpoint-up($size) //styling from mobile to desktop
+@mixin breakpoint-up($size) //mobile to desktop
     @media (min-width: map-get($breakpoints-up, $size))
         @content
 
-@mixin breakpoint-down($size) //styling from desktop to mobile
+@mixin breakpoint-down($size) //desktop to mobile
     @media (max-width: map-get($breakpoints-down, $size))
         @content
 
 //reusable mixins
-@mixin trans($time) //transitions for aniamtions
+@mixin trans($time) //transitions
     transition: all $time ease-in-out
 
 @mixin max_width($width) //max width
