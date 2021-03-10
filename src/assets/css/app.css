@@ -3,6 +3,18 @@ h1, h2, h3, p {
   padding: 0;
 }
 
+p {
+  font-size: 18px;
+  color: #666161;
+  text-align: justify;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666161;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
 }
@@ -164,7 +176,7 @@ ul {
 .hero_nav h1 {
   font-size: 1.5625rem;
   line-height: 1.6;
-  margin-bottom: 1.375rem;
+  margin-bottom: 2.5rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -172,11 +184,12 @@ ul {
 @media (min-width: 34.375em) {
   .hero_nav h1 {
     font-size: 2.5rem;
+    margin-bottom: 1.375rem;
   }
 }
 
 .hero_links {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 34.3125em) {
@@ -322,14 +335,69 @@ ul {
   width: 100%;
 }
 
+.intro {
+  border: 5px solid blue;
+}
+
+.intro_container {
+  border: 5px solid red;
+}
+
+.intro_container h2 {
+  text-align: center;
+}
+
+.intro_container .business-info-images {
+  position: relative;
+  max-width: 364px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro_container .business-info-image-stack {
+  max-width: 364px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+}
+
+.intro_container .business-info-image-stack .business-info-item-bottom {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / span 12;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.intro_container .business-info-image-stack .business-info-item-bottom img {
+  width: 100%;
+  display: block;
+}
+
+.intro_container .business-info-image-stack .business-info-item-top {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1 / 10;
+  padding-top: 20%;
+  z-index: 1;
+}
+
+.intro_container .business-info-image-stack .business-info-item-top img {
+  width: 100%;
+  display: block;
+}
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 100;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .header_nav {

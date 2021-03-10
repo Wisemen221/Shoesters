@@ -1,0 +1,33 @@
+//intro
+.intro
+    border: 5px solid blue
+
+    &_container
+        border: 5px solid red
+        h2
+            text-align: center
+        .business-info-images
+            position: relative
+            max-width: 364px
+            width: 100%
+            margin: 0 auto
+        .business-info-image-stack
+            max-width: 364px
+            width: 100%
+            display: grid
+            position: relative
+            grid-template-columns: repeat(10, 1fr)
+            .business-info-item-bottom
+                grid-column: 1 / span 12
+                grid-row: 1
+                img
+                    width: 100%
+                    display: block
+            .business-info-item-top
+                grid-row: 1
+                grid-column: 1 / 10
+                padding-top: 20%
+                z-index: 1
+                img
+                    width: 100%
+                    display: block

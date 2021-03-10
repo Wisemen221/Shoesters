@@ -18,13 +18,14 @@
         h1
             font-size: $n25
             line-height: 1.6
-            margin-bottom: $n22 //spacing
+            margin-bottom: $n40 //spacing
             @include trans(0.3s)
             @include breakpoint-up(sm) //increase the h1 font size
                 font-size: $n40
+                margin-bottom: $n22
     
     &_links //nav links for desktop
-        margin-bottom: $n20 //puts space between the fixed navbar and the contact button
+        margin-bottom: $n40 //puts space between the fixed navbar and the contact button
         @include breakpoint-down(xs) //hides the navigation on mobile
             display: none
         div

@@ -55,6 +55,51 @@ hero******
             <img class="hero_border" src="@/assets/images/svg/border_1.svg" role="presentation" loading="eager">
         </section>
 
+<!-- 
+intro******
+-->
+        <!-- <section class="intro"> -->
+            <!-- <div class="intro_container"> -->
+                <!-- intro title -->
+                <!-- <h2>Quality and Comfort Together at Last</h2> -->
+                <!-- contains the images and paragraph content -->
+                <!-- <div class="intro_content flex flex_dr_c flex_ai_c"> -->
+                    <!-- left hand side for image -->
+                    <!-- <div class="image_left"> -->
+                        <!-- boot image -->
+                        <!-- <img class="boot" src="@/assets/images/png/shoe_2.png" aria-label="A single black boot" alt="One single boot" loading="lazy"> -->
+                        <!-- svg background blob -->
+                        <!-- <img class="background" src="@/assets/images/svg/bk_blob.svg" role="presentation" loading="lazy"> -->
+                    <!-- </div> -->
+                    <!-- right hand side for text -->
+                    <!-- <div class="content_right"> -->
+                        <!-- <p>Formerly the  Birkenstock Footprints  shoe store we all knew and loved,  Shoesters  has evolved a little since your last visit…  We have added a couple of other brands to the mix, but remain focused on helping you and your feet be their happiest, A.K.A. most comfortable.  After all, your feet are your foundation right?  If you take care of them, they’ll take care of the rest of you!</p> -->
+                        <!-- <p>We have made it our mission to seek out the world’s most comfortable shoe brands and bring them to you.  Find out why.  We only offer the topmost quality-made footwear that aid your feet to be natural and healthy.  We carry orthopedically correct footwear, but even our fashion brands are the most comfort-conscious out there.</p> -->
+                        <!-- <p>So, if it has been a while since you last visited us, please try again! We sincerely hope that you like our updated concept.</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </section> -->
+
+
+        <section class="intro">
+            <div class="intro_container">
+                <!-- intro title -->
+                <h2>Quality and Comfort Together at Last</h2>
+                <!-- contains the images and paragraph content -->
+                <div class="business-info-images flex">
+                    <div class="business-info-image-stack">
+                        <div class="business-info-item business-info-item-top">
+                        <img src="@/assets/images/png/shoe_2.png" alt="A woman walking with new sandles">
+                        </div>
+                        <div class="business-info-item business-info-item-bottom">
+                        <img src="@/assets/images/svg/bk_blob.svg" alt="A man sitting on a stairs with new slippers">
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
     </div>
 
 </template>
