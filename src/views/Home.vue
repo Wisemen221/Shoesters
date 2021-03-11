@@ -58,45 +58,37 @@ hero******
 <!-- 
 intro******
 -->
-        <!-- <section class="intro"> -->
-            <!-- <div class="intro_container"> -->
-                <!-- intro title -->
-                <!-- <h2>Quality and Comfort Together at Last</h2> -->
-                <!-- contains the images and paragraph content -->
-                <!-- <div class="intro_content flex flex_dr_c flex_ai_c"> -->
-                    <!-- left hand side for image -->
-                    <!-- <div class="image_left"> -->
-                        <!-- boot image -->
-                        <!-- <img class="boot" src="@/assets/images/png/shoe_2.png" aria-label="A single black boot" alt="One single boot" loading="lazy"> -->
-                        <!-- svg background blob -->
-                        <!-- <img class="background" src="@/assets/images/svg/bk_blob.svg" role="presentation" loading="lazy"> -->
-                    <!-- </div> -->
-                    <!-- right hand side for text -->
-                    <!-- <div class="content_right"> -->
-                        <!-- <p>Formerly the  Birkenstock Footprints  shoe store we all knew and loved,  Shoesters  has evolved a little since your last visit…  We have added a couple of other brands to the mix, but remain focused on helping you and your feet be their happiest, A.K.A. most comfortable.  After all, your feet are your foundation right?  If you take care of them, they’ll take care of the rest of you!</p> -->
-                        <!-- <p>We have made it our mission to seek out the world’s most comfortable shoe brands and bring them to you.  Find out why.  We only offer the topmost quality-made footwear that aid your feet to be natural and healthy.  We carry orthopedically correct footwear, but even our fashion brands are the most comfort-conscious out there.</p> -->
-                        <!-- <p>So, if it has been a while since you last visited us, please try again! We sincerely hope that you like our updated concept.</p> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </section> -->
-
-
         <section class="intro">
             <div class="intro_container">
                 <!-- intro title -->
-                <h2>Quality and Comfort Together at Last</h2>
-                <!-- contains the images and paragraph content -->
-                <div class="business-info-images flex">
-                    <div class="business-info-image-stack">
-                        <div class="business-info-item business-info-item-top">
-                        <img src="@/assets/images/png/shoe_2.png" alt="A woman walking with new sandles">
-                        </div>
-                        <div class="business-info-item business-info-item-bottom">
-                        <img src="@/assets/images/svg/bk_blob.svg" alt="A man sitting on a stairs with new slippers">
+                <div class="title">
+                    <h2>Quality and Comfort Together at Last</h2>
+                </div>
+                <div class="intro_content flex flex_dr_c flex_ai_c">
+                    <div class="image_left">
+                        <!-- background svg -->
+                        <svg @mouseover="test" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="365" height="369" viewBox="0 0 365 369">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect id="Rectangle_2" data-name="Rectangle 2" width="365" height="369"/>
+                                </clipPath>
+                            </defs>
+                            <g id="bk_blob" clip-path="url(#clip-path)">
+                                <path ref="blob1" id="Path_2" data-name="Path 2" d="M364.6,42.6C361.16,1.68,290.08-9.346,258.867,8.684c-29.942,17.3-49.48,43.723-76.7,48.906-23.349,4.846-50.569-6.761-68.111-5.521-3.255.23-32.906.45-50.206,35.721-18.914,38.561,7.137,58.71-4.6,87.9-9.8,32.341-56.5,36.4-58.8,63.329-3.266,32,21.535,29.862,23.833,57.546,0,20.208-18.391,32.848-20.765,45.675A24.185,24.185,0,0,0,23,368.677q.053.009,305.536,0A36.318,36.318,0,0,0,364.84,332.34Q364.6,42.606,364.6,42.6Z" fill="#ec7e7e"/>
+                            </g>
+                        </svg>
+                        <div class="boot_image flex">
+                            <img class="boot" src="@/assets/images/png/shoe_2.png" aria-label="A single black boot" alt="One single boot" loading="lazy">
+                            <div class="space"></div>
                         </div>
                     </div>
+                    <!-- right hand side for text -->
+                    <div class="content_right">
+                        <p>Formerly the  Birkenstock Footprints  shoe store we all knew and loved,  Shoesters  has evolved a little since your last visit…  We have added a couple of other brands to the mix, but remain focused on helping you and your feet be their happiest, A.K.A. most comfortable.  After all, your feet are your foundation right?  If you take care of them, they’ll take care of the rest of you!</p><br>
+                        <p>We have made it our mission to seek out the world’s most comfortable shoe brands and bring them to you.  Find out why.  We only offer the topmost quality-made footwear that aid your feet to be natural and healthy.  We carry orthopedically correct footwear, but even our fashion brands are the most comfort-conscious out there.</p><br>
+                        <p>So, if it has been a while since you last visited us, please try again! We sincerely hope that you like our updated concept.</p>
                     </div>
+                </div>
             </div>
         </section>
 
@@ -108,11 +100,14 @@ intro******
     import Nav from "@/components/Nav"
     import { onMounted, ref } from 'vue'
     import { gsap, Back } from "gsap"
+    import { MorphSVGPlugin } from "gsap/MorphSVGPlugin"
+    gsap.registerPlugin(MorphSVGPlugin)
 
     export default {
         name: 'Home',
         components:{Nav},
         setup(props,context){
+            const blob1 = ref(null)
             const scrolling_element = ref(null) //scroll wrapper element that is being scrolled by user
             const change_color = ref(true) //variable that's passed to nav component for background change
             const toggled = ref(false)
@@ -147,7 +142,11 @@ intro******
             const closeNav = ()=>{ //run the close nav animation using gsap
                 tl.reverse()
             }
-            return{toggled,toggleLayover,layoverToggle,scrolling,scrolling_element,change_color,openNav,closeNav,pauseTimeLine}
+            const test = ()=>{
+                // console.log(blob1.value)  //reserved for morphing svg animation
+                
+            }
+            return{toggled,toggleLayover,layoverToggle,scrolling,scrolling_element,change_color,openNav,closeNav,pauseTimeLine,test,blob1}
         },
     }
 </script>

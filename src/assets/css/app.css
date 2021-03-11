@@ -4,19 +4,23 @@ h1, h2, h3, p {
 }
 
 p {
-  font-size: 18px;
+  font-size: 0.9375rem;
   color: #666161;
   text-align: justify;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #666161;
 }
 
 a, a:visited, a:hover {
   text-decoration: none;
+}
+
+svg {
+  display: block;
 }
 
 ul {
@@ -87,8 +91,7 @@ ul {
   left: 0;
   bottom: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(255, 255, 255, 0.8)));
-  background: linear-gradient(black, rgba(255, 255, 255, 0.8));
+  background: rgba(255, 255, 255, 0.9);
   width: 100vw;
   height: 100vh;
   padding: 6.25rem 0.625rem;
@@ -104,7 +107,7 @@ ul {
   margin: 0 auto;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #000000;
   opacity: 0;
   -webkit-transform: translateY(-6.25rem);
           transform: translateY(-6.25rem);
@@ -144,8 +147,10 @@ ul {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF4000), to(#ECC990));
-  background: linear-gradient(#FF4000, #ECC990);
+  background-image: url("../images/svg/hero.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
 }
 
 @media (min-width: 75em) {
@@ -336,60 +341,125 @@ ul {
 }
 
 .intro {
-  border: 5px solid blue;
+  padding-top: 8.1875rem;
 }
 
-.intro_container {
-  border: 5px solid red;
-}
-
-.intro_container h2 {
-  text-align: center;
-}
-
-.intro_container .business-info-images {
-  position: relative;
-  max-width: 364px;
+.intro_container .title {
+  max-width: 82.25rem;
+  min-width: 18.75rem;
   width: 100%;
   margin: 0 auto;
 }
 
-.intro_container .business-info-image-stack {
-  max-width: 364px;
+.intro_container .title h2 {
+  margin: 0 0.8125rem 2.5rem 0.8125rem;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 34.375em) {
+  .intro_container .title h2 {
+    font-size: 1.6875rem;
+  }
+}
+
+@media (min-width: 82.5625em) {
+  .intro_container .title h2 {
+    text-align: left;
+  }
+}
+
+.intro_content {
+  max-width: 82.25rem;
+  min-width: 18.75rem;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  margin: 0 auto;
+  padding: 0 0.8125rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 34.375em) {
+  .intro_content {
+    padding: 0 4.375rem;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .intro_content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 6.5rem;
+    padding-right: 2.9375rem;
+  }
+}
+
+.intro_content .image_left {
   position: relative;
-  -ms-grid-columns: (1fr)[10];
-      grid-template-columns: repeat(10, 1fr);
-}
-
-.intro_container .business-info-image-stack .business-info-item-bottom {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 12;
-  grid-column: 1 / span 12;
-  -ms-grid-row: 1;
-  grid-row: 1;
-}
-
-.intro_container .business-info-image-stack .business-info-item-bottom img {
+  max-width: 20rem;
   width: 100%;
-  display: block;
+  padding-left: 1.75rem;
+  padding-right: 2.5rem;
+  margin: 0 auto;
+  margin-bottom: 6.5rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.intro_container .business-info-image-stack .business-info-item-top {
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 9;
-  grid-column: 1 / 10;
-  padding-top: 20%;
-  z-index: 1;
+@media (min-width: 34.375em) {
+  .intro_content .image_left {
+    max-width: 25.875rem;
+  }
 }
 
-.intro_container .business-info-image-stack .business-info-item-top img {
+@media (min-width: 62.5em) {
+  .intro_content .image_left {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 82.5625em) {
+  .intro_content .image_left {
+    border-right: 0.125rem solid #666161;
+  }
+}
+
+.intro_content .image_left svg {
   width: 100%;
-  display: block;
+  height: 100%;
+}
+
+.intro_content .image_left .boot_image {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.intro_content .image_left .boot_image .boot {
+  width: 65%;
+}
+
+.intro_content .image_left .boot_image .space {
+  width: 35%;
+}
+
+.intro_content .content_right {
+  line-height: 1.5;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 62.5em) {
+  .intro_content .content_right {
+    padding-left: 2.5rem;
+  }
 }
 
 .header {
