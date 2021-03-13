@@ -112,7 +112,7 @@ about us******
             <article class="about_info">
                 <div class="avatar">
                     <!-- onwer picture -->
-                    <img src="@/assets/images/png/owner.png" aria-label="The owner of Shoesters" alt="The owner of Shoesters">
+                    <img src="@/assets/images/png/owner.png" aria-label="The owner of Shoesters" alt="The owner of Shoesters" loading="lazy">
                 </div>
                 <p>Formerly the Birkenstock Footprints shoe store we all knew and loved, Shoesters has evolved a little since your last visit… We have added a couple of other brands to the mix, but remain focused on helping you and your feet be their happiest, A.K.A. most comfortable. After all, your feet are your foundation right? If you take care of them, they’ll take care of the rest of you!</p><br>
                 <p>Shoesters – that is who we are and what we do. We fit and sell the world’s best shoes. We are committed to the health and well-being of our patrons’ feet while constantly remaining aware of their sense of style. We are proud to provide world class customer service and to give every customer the benefit of a proper fit.</p>
@@ -129,7 +129,7 @@ brands******
                     <img class="brands_shoe shoe" src="@/assets/images/png/shoe_3.png" aria-label="A single shoe" alt="One single shoe" loading="lazy">
                     <div class="brands_title flex">
                         <!-- background svg -->
-                        <img class="brands_title title" src="@/assets/images/svg/brands.svg" role="presentation">
+                        <img class="brands_title title" src="@/assets/images/svg/brands.svg" role="presentation" loading="lazy">
                         <div class="space"></div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ list of shoes******
         <section class="shoes">
             <div class="shoes_container">
                 <!-- list of all shoes -->
-                <img src="@/assets/images/svg/shoes.svg" aria-label="A list of all shoe brands Shoesters is partnered with" alt="A list of all shoe brands Shoesters is partnered with">
+                <img src="@/assets/images/svg/shoes.svg" aria-label="A list of all shoe brands Shoesters is partnered with" alt="A list of all shoe brands Shoesters is partnered with" loading="lazy">
             </div>
         </section>
 
@@ -155,7 +155,7 @@ locations******
             <div class="locations_container">
                 <div class="logo_container">
                     <!-- location svg logo -->
-                    <img src="@/assets/images/svg/location_logo.svg" aria-label="locations"  alt="Locations">
+                    <img src="@/assets/images/svg/location_logo.svg" aria-label="locations"  alt="Locations" loading="lazy">
                 </div>
                 <div class="locations_map">
                     <!-- google maps -->

@@ -1148,6 +1148,7 @@ input:invalid {
 
 .red_background {
   background-color: #FF4000;
+  height: 65px;
 }
 
 @-webkit-keyframes fade_in {
