@@ -1,6 +1,9 @@
 //intro
 .intro
     padding-top: $n131
+    @include trans(0.3s)
+    @include breakpoint-up(smmd)
+        padding-top: $n207
 
     &_container
         .title
@@ -9,9 +12,9 @@
             width: 100%
             margin: 0 auto
             h2
-                margin: 0 $n13 $n40 $n13
+                margin: 0 $n20 $n40 $n20
                 text-align: center
-                @include trans(0.3s)
+                // @include trans(0.3s)
                 @include breakpoint-up(sm)
                     font-size: $n27
                 @include breakpoint-up(mdlg)
@@ -22,7 +25,7 @@
         @include min_width($n300)
         width: 100%
         margin: 0 auto
-        padding: 0 $n13
+        padding: 0 $n20
         @include trans(0.3s)
         @include breakpoint-up(sm)
             padding: 0 $n70
@@ -35,31 +38,28 @@
             @include max_width($n320)
             width: 100%
             padding-left: $n28
-            padding-right: $n40
             margin: 0 auto
             margin-bottom: $n104
             overflow: hidden
-            @include trans(0.3s)
+            // @include trans(0.3s)
             @include breakpoint-up(sm)
                 @include max_width($n414)
             @include breakpoint-up(smmd)
                 margin-bottom: 0
             @include breakpoint-up(mdlg)
                 border-right: $n2 solid $grey_text
+                padding-right: $n40
             svg
                 width: 100%
                 height: 100%
+                #blob1
+                    visibility: hidden
             .boot_image
                 position: absolute
                 bottom: 5%
                 left: 0
                 width: 100%
-                // max-height: 217px
-                // min-height: 178px
-                @include trans(0.3s)
-                // @include breakpoint-up(sm)
-                    // max-height: 283px
-                    // min-height: 283px
+                // @include trans(0.3s)
                 .boot
                     width: 65%
                 .space
@@ -68,4 +68,6 @@
             line-height: 1.5
             @include trans(0.3s)
             @include breakpoint-up(smmd)
+                padding-left: $n20
+            @include breakpoint-up(mdlg)
                 padding-left: $n40

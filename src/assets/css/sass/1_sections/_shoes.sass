@@ -1,0 +1,16 @@
+//shoes
+.shoes
+    padding-top: $n95
+    @include trans(0.3s)
+    @include breakpoint-up(smmd)
+        padding-top: $n161
+
+    &_container
+        @include max_width($n771)
+        @include min_width($n300)
+        width: 100%
+        padding: 0 $n20
+        margin: 0 auto
+        img //svg image of listings of shoes
+            display: block
+            width: 100%

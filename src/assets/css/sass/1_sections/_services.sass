@@ -1,0 +1,33 @@
+//services
+.services
+    padding-top: $n179
+    text-align: center
+    @include trans(0.3s)
+    @include breakpoint-up(smmd2)
+        padding-top: $n321
+    h2
+        margin: 0 $n20 $n60 $n20
+        // @include trans(0.3s)
+        @include breakpoint-up(sm)
+            font-size: $n27
+
+    &_box_container
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax($n285, 1fr))
+        grid-gap: $n10
+        @include max_width($n1200)
+        width: 100%
+        margin: 0 auto
+        padding: 0 $n20
+        .boxes
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: $n33 $n66
+            background-color: $white_background
+            border-radius: $n10
+            -webkit-font-smoothing: subpixel-antialiased
+            box-shadow: 0 $n8 $n12 rgba(0,0,0,0.3)
+        .scale_card
+            @include breakpoint-up(smmd2)
+                transform: scaleY(1.15)

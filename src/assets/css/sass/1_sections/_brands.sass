@@ -1,0 +1,49 @@
+//brands
+.brands
+    padding-top: $n100
+    @include trans(0.3s)
+    @include breakpoint-up(md)
+        padding-top: $n174
+
+    &_container
+        @include max_width($n856)
+        @include min_width($n300)
+        width: 100%
+        margin: 0 auto
+        padding: 0 $n20
+        .image //shoe image
+            position: relative
+            @include max_width($n320)
+            width: 100%
+            padding-left: $n125
+            overflow: hidden
+            @include trans(0.3s)
+            @include breakpoint-up(sm)
+                @include max_width($n400)
+            @include breakpoint-up(md)
+                @include max_width($n856)
+            .shoe
+                width: 100%
+                height: 100%
+    
+    &_title //brands svg logo
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        width: 100%
+        z-index: -1
+        .title //used to keep responsive
+            width: 55%
+            // @include trans(0.3s)
+            @include breakpoint-up(sm)
+                width: 49%
+            @include breakpoint-up(md)
+                width: 36.5%
+        .space
+            width: 45%
+            @include trans(0.3s)
+            @include breakpoint-up(sm)
+                width: 51%
+            @include breakpoint-up(md)
+                width: 64.5%

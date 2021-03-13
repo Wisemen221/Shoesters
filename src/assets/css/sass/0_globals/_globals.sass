@@ -14,6 +14,11 @@ h2
     font-size: $n18
     font-weight: bold
     color: $grey_text
+
+h3
+    font-size: $n20
+    font-weight: bold
+    color: $grey_text
     
 a, a:visited, a:hover
     text-decoration: none
@@ -23,6 +28,33 @@ svg
 
 ul
     list-style-type: none
+
+
+table, td, th
+    border: 0
+
+table
+    width: 100%
+    border-collapse: collapse
+td
+    text-align: center
+    vertical-align: middle
+th, td
+    padding-bottom: $n15
+    padding-top: $n15
+
+input
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border-radius: $n20
+    padding: 0.515625rem 1rem
+    color: $black_text
+    &:focus
+        color: $black_text
+        box-shadow: none
+    &:invalid
+        box-shadow: none
 
 //helper classes
 .flex //flex values

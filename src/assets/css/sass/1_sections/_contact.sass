@@ -1,0 +1,49 @@
+//contact
+.contact
+    @include max_width($n427)
+    @include min_width($n300)
+    width: 100%
+    margin: $n264 auto 0 auto
+    padding: 0 $n20
+    text-align: center
+    h2
+        margin-bottom: $n42
+        color: $white_text
+        // @include trans(0.3s)
+        @include breakpoint-up(sm)
+            font-size: $n27
+    input
+        border: 0
+        width: 100%
+        margin-bottom: $n15
+        &:focus::placeholder
+            opacity: 0.4
+        &:not(:focus)
+            color: $grey_text
+    textarea
+        border: 0
+        border-radius: $n20
+        width: 100%
+        margin-bottom: $n15
+        padding: $n8 $n16
+        resize: both
+        &:focus
+            color: $grey_text
+            box-shadow: none
+        &:not(:focus)
+            color: $grey_text
+        &:invalid
+            box-shadow: none
+    .contact_btn
+        display: block
+        background-color: $white_background
+        border-radius: $n20
+        color: $grey_text
+        padding: 0.59375rem
+        width: $n90
+        font-weight: bold
+        transform: perspective($n1) scale(1) translateZ(0)
+        backface-visibility: hidden
+        -webkit-font-smoothing: subpixel-antialiased
+        &:hover
+            transform: scale(0.95)

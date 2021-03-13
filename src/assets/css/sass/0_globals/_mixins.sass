@@ -1,11 +1,11 @@
 //global mixins
 
 //map
-//550px, 1000px, 1200px, 1321px
-$breakpoints-up: ('sm': '34.375em', 'smmd': '62.5em', 'md': '75em', 'mdlg': '82.5625em')
+//550px, 900px, 965px, 1200px, 1321px
+$breakpoints-up: ('sm': '34.375em', 'smmd': '56.25em', 'smmd2': '60.3125em', 'md': '75em', 'mdlg': '82.5625em')
 
-//549px
-$breakpoints-down: ('xs': '34.3125em')
+//549px, 889px
+$breakpoints-down: ('xs': '34.3125em', 'smmd': '55.5625em')
 
 @mixin breakpoint-up($size) //mobile to desktop
     @media (min-width: map-get($breakpoints-up, $size))

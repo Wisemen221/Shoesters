@@ -1,0 +1,90 @@
+//locations
+.locations
+    position: relative
+    background-image: url("../images/svg/location_background.svg")
+    background-repeat: no-repeat
+    background-position: center bottom
+    background-size: cover
+
+    &_swirl //svg blob image
+        position: absolute
+        top: $n50
+        left: 0
+        @include breakpoint-down(smmd)
+            display: none
+
+    &_container
+        position: relative
+        @include max_width($n800)
+        @include min_width($n300)
+        width: 100%
+        margin: 0 auto
+        padding: $n192 $n20 0 $n20
+        @include breakpoint-up(sm)
+            padding-top: $n298
+        @include breakpoint-up(smmd)
+            padding-top: $n498
+        
+        .logo_container //svg location logo
+            position: absolute
+            top: $n123
+            left: $n80
+            @include max_width($n171)
+            width: 100%
+            z-index: 0
+            @include breakpoint-up(sm)
+                @include max_width($n392)
+                top: $n140
+                left: $n100
+            @include breakpoint-up(smmd)
+                top: $n340
+                left: $n125
+            img
+                display: block
+                width: 100%
+
+    &_map
+        border-radius: $n20
+        position: relative
+        width: 100%
+        padding: $n42 $n19
+        background-color: $white_background
+        box-shadow: 0 $n8 $n12 rgba(0,0,0,0.3)
+        z-index: 1
+        // @include trans(0.3s)
+        @include breakpoint-up(smmd)
+            padding: $n50 $n96
+        .map //google map
+            width: 100%
+            height: $n168
+            @include trans(0.3s)
+            @include breakpoint-up(sm)
+                height: $n400
+        .stores
+            padding-top: $n24
+            h3
+                text-align: center
+                font-size: $n18
+                margin: $n15 auto
+            h3, p
+                text-align: center
+                @include trans(0.3s)
+                @include breakpoint-up(smmd)
+                    text-align: left
+            .location p
+                text-align: center
+                line-height: 1.5
+            .mobile_map //map for mobile devices
+                @include breakpoint-up(smmd)
+                    display: none
+            .desktop_map //map for desktop devices
+                @include breakpoint-down(smmd)
+                    display: none
+                th, td
+                    color: $grey_text
+                    
+    &_copyright //copyright text
+        text-align: center
+        padding-top: $n264
+        padding-bottom: $n10
+        font-size: $n12

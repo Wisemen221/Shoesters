@@ -1,0 +1,51 @@
+//about us
+.about
+    position: relative
+    margin-top: $n217
+    padding: $n140 $n20 $n215 $n20
+    background-image: url("../images/svg/about_us_background.svg")
+    background-repeat: no-repeat
+    background-position: center bottom
+    background-size: cover
+    @include trans(0.3s)
+    @include breakpoint-up(sm)
+        padding-bottom: $n257
+        padding-top: $n180
+
+    &_logo //the svg logo
+        @include max_width($n234)
+        width: 100%
+        margin: 0 auto $n100 auto
+        svg
+            width: 100%
+
+    &_info //about us paragraphs
+        position: relative
+        @include max_width($n350)
+        width: 100%
+        margin: 0 auto
+        padding: $n56 $n18
+        line-height: 1.5
+        background-color: $white_background
+        border-radius: $n10
+        // @include trans(0.3s)
+        @include breakpoint-up(sm)
+            @include max_width($n550)
+            padding: $n56 $n40
+        .avatar //the owners picture
+            border: $n5 solid white
+            border-radius: 100%
+            position: absolute
+            top: -$n40
+            left: 50%
+            width: $n70
+            padding: $n5
+            background-color: $avater_background
+            transform: translateX(-50%)
+            @include trans(0.3s)
+            @include breakpoint-up(sm)
+                width: $n75
+                top: -$n45
+            img
+                display: block
+                width: 100%
