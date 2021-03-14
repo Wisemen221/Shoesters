@@ -142,7 +142,7 @@ list of shoes******
         <section class="shoes">
             <div class="shoes_container">
                 <!-- list of all shoes -->
-                <img src="@/assets/images/svg/shoes.svg" aria-label="A list of all shoe brands Shoesters is partnered with" alt="A list of all shoe brands Shoesters is partnered with" loading="lazy">
+                <img src="@/assets/images/svg/shoes.svg" aria-label="A list of all shoe brands Shoesters is partnered with" alt="A list of all shoe brands Shoesters is partnered with" loading="eager">
             </div>
         </section>
 
