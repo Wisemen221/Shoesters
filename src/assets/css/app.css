@@ -493,7 +493,6 @@ input:invalid {
   padding-left: 1.75rem;
   margin: 0 auto;
   margin-bottom: 6.5rem;
-  overflow: hidden;
 }
 
 @media (min-width: 34.375em) {
@@ -716,7 +715,6 @@ input:invalid {
   max-width: 20rem;
   width: 100%;
   padding-left: 7.8125rem;
-  overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }

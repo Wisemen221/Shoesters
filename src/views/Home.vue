@@ -43,7 +43,7 @@ hero******
                         </div>
                     </nav>
                     <!-- contact button -->
-                    <a data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600" class="hero_button" href="#">LET'S TALK</a>
+                    <a data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600" class="hero_button" @click="goToContact" href="#">LET'S TALK</a>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" class="hero_image">
                     <!-- the boot -->
@@ -397,14 +397,14 @@ copyright******
                      }
                  })
 
-                tl.from('.image_left',{opacity: 0, duration: 0.5, ease: "power2.out"})
-                .from('.boot_image',{x: 100, opacity: 0, duration: 1, ease: "power2.out"})
+                tl.from('.image_left',{x: -100, opacity: 0, duration: 1, ease: "power2.out"})
+                .from('.boot_image',{x: 100, opacity: 0, duration: 1, ease: "power2.out"},"-=0.4")
                 .from('.intro_title',{x: -200, opacity: 0, duration: 1, ease: "power2.out"},"-=1")
                 .from('.intro_p_1',{x: 200, opacity: 0, duration: 1, ease: "power2.out"},"-=0.8")
                 .from('.intro_p_2',{x: 200, opacity: 0, duration: 1, ease: "power2.out"},"-=0.8")
                 .from('.intro_p_3',{x: 200, opacity: 0, duration: 1, ease: "power2.out"},"-=0.8")
 
-                tl2.from('.services_title',{scale: 0, opacity: 0, duration: 1, ease: "power2.out"})
+                tl2.from('.services_title',{scale: 0, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"})
                 .from('.box_1',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
                 .from('.box_2',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
                 .from('.box_3',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
