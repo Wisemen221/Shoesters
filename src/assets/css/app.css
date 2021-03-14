@@ -10,7 +10,7 @@ p {
 }
 
 h2 {
-  font-size: 1.125rem;
+  font-size: 1.6875rem;
   font-weight: bold;
   color: #666161;
 }
@@ -132,7 +132,7 @@ input:invalid {
 
 .layover {
   position: fixed;
-  top: 5.25rem;
+  top: 3.25rem;
   left: 0;
   bottom: 0;
   right: 0;
@@ -225,7 +225,7 @@ input:invalid {
 }
 
 .hero_nav h1 {
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
   -webkit-transition: all 0.3s ease-in-out;
@@ -850,9 +850,9 @@ input:invalid {
 
 .locations_container .logo_container {
   position: absolute;
-  top: 7.6875rem;
+  top: 6.5rem;
   left: 5rem;
-  max-width: 10.6875rem;
+  max-width: 13.4375rem;
   width: 100%;
   z-index: 0;
 }
@@ -980,6 +980,7 @@ input:invalid {
 .contact input {
   border: 0;
   width: 100%;
+  font-size: 1.1rem;
   margin-bottom: 0.9375rem;
 }
 
@@ -1007,6 +1008,7 @@ input:invalid {
   border: 0;
   border-radius: 1.25rem;
   width: 100%;
+  font-size: 1.1rem;
   margin-bottom: 0.9375rem;
   padding: 0.5rem 1rem;
   resize: both;
@@ -1028,10 +1030,10 @@ input:invalid {
 }
 
 .contact .contact_btn {
-  display: block;
   background-color: #ffffff;
   border-radius: 1.25rem;
-  color: #666161;
+  color: #9c9c9c;
+  font-size: 1.1rem;
   padding: 0.59375rem;
   width: 5.625rem;
   font-weight: bold;
@@ -1040,11 +1042,13 @@ input:invalid {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
 }
 
 .contact .contact_btn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  color: #666161;
 }
 
 .header {
@@ -1061,6 +1065,8 @@ input:invalid {
   width: 100%;
   margin: 0 auto;
   padding: 1.9375rem 1.25rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 34.375em) {
@@ -1148,7 +1154,14 @@ input:invalid {
 
 .red_background {
   background-color: #FF4000;
-  height: 65px;
+}
+
+.small {
+  padding: 0.9375rem 1.25rem;
+}
+
+.big {
+  padding: 1.9375rem 1.25rem;
 }
 
 @-webkit-keyframes fade_in {

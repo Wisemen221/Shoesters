@@ -5,7 +5,7 @@ header******
 -->
     <!-- changing the background of the header on scroll -->
     <header class="header" :class="change_color ? 'no_background' : 'red_background'">
-        <nav class="header_nav flex flex_jc_sb flex_ai_c">
+        <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="change_color ? 'big' : 'small'">
             <!-- logo image -->
             <a href="/" data-aos="fade-right" data-aos-duration="1000" class="header_logo flex flex_ai_c">
                 <img src="@/assets/images/svg/logo.svg" alt="Shoesters Logo">

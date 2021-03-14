@@ -28,7 +28,7 @@ hero******
                 <div class="hero_nav">
                     <h1 data-aos="fade-down" data-aos-duration="1000">Purveyors of Comfortable<br>Luxury Footwear</h1>
                     <!-- nav links for desktop only -->
-                    <nav data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" class="hero_links flex flex_jc_c">
+                    <nav data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" class="hero_links flex flex_jc_c">
                         <div @mouseleave="closeNav" @mouseenter="openNav" class="left_nav">
                             <ul>
                                 <li><a href="/">HOME</a></li>
@@ -43,9 +43,9 @@ hero******
                         </div>
                     </nav>
                     <!-- contact button -->
-                    <a data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400" class="hero_button" href="#">LET'S TALK</a>
+                    <a data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600" class="hero_button" href="#">LET'S TALK</a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" class="hero_image">
+                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" class="hero_image">
                     <!-- the boot -->
                     <img src="@/assets/images/png/shoe_11.png" aria-label="A single blue boot" alt="One single boot" loading="eager">
                     <div class="shadow"></div>
@@ -404,7 +404,7 @@ copyright******
                 .from('.intro_p_2',{x: 200, opacity: 0, duration: 1, ease: "power2.out"},"-=0.8")
                 .from('.intro_p_3',{x: 200, opacity: 0, duration: 1, ease: "power2.out"},"-=0.8")
 
-                tl2.from('.services_title',{y: -100, opacity: 0, duration: 1, ease: "power2.out"})
+                tl2.from('.services_title',{scale: 0, opacity: 0, duration: 1, ease: "power2.out"})
                 .from('.box_1',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
                 .from('.box_2',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
                 .from('.box_3',{x: 200, opacity: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
@@ -418,7 +418,7 @@ copyright******
                 .from('#title',{x: 100, opacity: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('.about_info',{scale: 0, opacity: 0, duration: 1.5, ease: "elastic.out(1, 1)"},"-=1.5")
 
-                tl4.from('.brands_shoe',{scale: 0, x: 100, opacity: 0, duration: 1, ease: "elastic.out(1, 1)"})
+                tl4.from('.brands_shoe',{scale: 0, opacity: 0, duration: 1, ease: "elastic.out(1, 1)"})
                 .from('.brands_title',{x: 20, opacity: 0, duration: 1, ease: "power2.out"},"-=0.5")
                 .from('.shoes_container',{y: 100, opacity: 0, duration: 1, ease: "power2.out"},"-=0.5")
                 

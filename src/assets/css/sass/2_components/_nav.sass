@@ -13,6 +13,7 @@
         width: 100%
         margin: 0 auto
         padding: $n31 $n20
+        @include trans(0.3s)
     
     &_logo //website logo
 
@@ -67,4 +68,8 @@
 
 .red_background
     background-color: $red_background //when user scrolls down the top nav is red
-    height: 65px
+
+.small
+    padding: $n15 $n20 //when user scrolls down nav reduces padding
+.big
+    padding: $n31 $n20 //when user scrolls down nav increases padding

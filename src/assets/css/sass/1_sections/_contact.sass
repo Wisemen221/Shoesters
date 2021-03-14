@@ -15,6 +15,7 @@
     input
         border: 0
         width: 100%
+        font-size: 1.1rem
         margin-bottom: $n15
         &:focus::placeholder
             opacity: 0.4
@@ -24,6 +25,7 @@
         border: 0
         border-radius: $n20
         width: 100%
+        font-size: 1.1rem
         margin-bottom: $n15
         padding: $n8 $n16
         resize: both
@@ -35,15 +37,17 @@
         &:invalid
             box-shadow: none
     .contact_btn
-        display: block
         background-color: $white_background
         border-radius: $n20
-        color: $grey_text
+        color: #9c9c9c
+        font-size: 1.1rem
         padding: 0.59375rem
         width: $n90
         font-weight: bold
         transform: perspective($n1) scale(1) translateZ(0)
         backface-visibility: hidden
         -webkit-font-smoothing: subpixel-antialiased
+        cursor: pointer
         &:hover
             transform: scale(0.95)
+            color: $grey_text
