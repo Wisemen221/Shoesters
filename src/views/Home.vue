@@ -232,7 +232,7 @@ locations******
             </div>
 
 <!-- 
-contact******
+contact****** 
 -->
             <form id="contact" class="contact">
                 <h2 class="contact_title">Let's Connect</h2>
