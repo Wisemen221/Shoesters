@@ -63,10 +63,10 @@ intro******
                     <h2 class="intro_title">Quality and Comfort Together at Last</h2>
                 </div>
                 <div class="intro_content flex flex_dr_c flex_ai_c">
-                    <div ref="image_left" class="image_left">
+                    <div ref="image_left flex flex-dr-c" class="image_left">
                         <!-- background svg -->
                         <svg @mouseover="morph" xmlns="http://www.w3.org/2000/svg" width="364.686" height="368.364" viewBox="0 0 364.686 368.364"><g fill="#ec7e7e"><path id="blob2" class="a" d="M33 0h299a33 33 0 0133 33v302a33 33 0 01-33 33H33a33 33 0 01-33-33V33A33 33 0 0133 0z"/><path id="blob1" d="M364.446 42.282c-3.44-40.92-74.52-51.946-105.733-33.916-29.942 17.3-49.48 43.723-76.7 48.906-23.349 4.846-50.569-6.761-68.111-5.521-3.255.23-32.906.45-50.206 35.721-18.914 38.561 7.137 58.71-4.6 87.9-9.8 32.341-56.5 36.4-58.8 63.329-3.266 32 21.535 29.862 23.833 57.546 0 20.208-18.391 32.848-20.765 45.675a24.185 24.185 0 0019.482 26.437q.053.009 305.536 0a36.318 36.318 0 0036.3-36.337l-.236-289.74z"/></g></svg>
-                        <div class="boot_image flex">
+                        <div class="boot_image flex flex-dr-c">
                             <!-- boot image -->
                             <img class="boot" src="@/assets/images/png/shoe_2.png" aria-label="A single black boot" alt="One single boot" loading="lazy">
                             <div class="space"></div>

@@ -35,9 +35,10 @@
             padding-right: $n47
         .image_left //boot on the left side with svg background
             position: relative
-            @include max_width(200px)
+            @include max_width($n200)
             width: 100%
             padding-left: $n28
+            align-items: flex-start
             margin: 0 auto
             margin-bottom: $n104
             // @include trans(0.3s)
@@ -54,6 +55,7 @@
                 #blob1
                     visibility: hidden
             .boot_image
+                align-items: center
                 position: absolute
                 bottom: 5%
                 left: 0
@@ -61,6 +63,8 @@
                 // @include trans(0.3s)
                 .boot
                     width: 65%
+                    align-self: flex-start
+                    object-fit: contain
                 .space
                     width: 35% //use space to help push the boot image to the left
         .content_right //text on the right side

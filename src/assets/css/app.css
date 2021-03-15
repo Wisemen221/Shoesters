@@ -438,9 +438,10 @@ input:invalid {
 
 .intro_content .image_left {
   position: relative;
-  max-width: 200px;
+  max-width: 12.5rem;
   width: 100%;
   padding-left: 1.75rem;
+  align-items: flex-start;
   margin: 0 auto;
   margin-bottom: 6.5rem;
 }
@@ -474,6 +475,7 @@ input:invalid {
 }
 
 .intro_content .image_left .boot_image {
+  align-items: center;
   position: absolute;
   bottom: 5%;
   left: 0;
@@ -482,6 +484,8 @@ input:invalid {
 
 .intro_content .image_left .boot_image .boot {
   width: 65%;
+  align-self: flex-start;
+  object-fit: contain;
 }
 
 .intro_content .image_left .boot_image .space {
