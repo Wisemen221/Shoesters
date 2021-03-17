@@ -330,17 +330,7 @@ copyright******
                      scrollTrigger: {
                         scroller: ".scroll_wrapper",
                         trigger: ".image_left",
-                        start: "top bottom-=300px",
-                        onUpdate: self => {
-                            this.testing()
-                        }
-                     }
-                 })
-                 let tl2 = gsap.timeline({
-                     scrollTrigger: {
-                        scroller: ".scroll_wrapper",
-                        trigger: ".services_title",
-                        start: "top bottom-=300px",
+                        start: "center bottom",
                         onUpdate: self => {
                             this.testing()
                         }
@@ -350,82 +340,30 @@ copyright******
                      scrollTrigger: {
                         scroller: ".scroll_wrapper",
                         trigger: ".about",
-                        start: "top bottom-=300px",
-                        onUpdate: self => {
-                            this.testing()
-                        }
-                     }
-                 })
-                 let tl4 = gsap.timeline({
-                     scrollTrigger: {
-                        scroller: ".scroll_wrapper",
-                        trigger: ".brands_shoe",
-                        start: "top bottom-=300px",
-                        onUpdate: self => {
-                            this.testing()
-                        }
+                        start: "center bottom"
                      }
                  })
                  let tl5 = gsap.timeline({
                      scrollTrigger: {
                         scroller: ".scroll_wrapper",
                         trigger: ".locations_swirl",
-                        start: "top bottom-=300px",
-                        onUpdate: self => {
-                            this.testing()
-                        }
+                        start: "center center"
                      }
                  })
                  let tl6 = gsap.timeline({
                      scrollTrigger: {
                         scroller: ".scroll_wrapper",
                         trigger: ".contact_title",
-                        start: "top bottom-=300px",
-                        onUpdate: self => {
-                            this.testing()
-                        }
+                        start: "center bottom"
                      }
                  })
-                 let tl7 = gsap.timeline({
-                     scrollTrigger: {
-                        scroller: ".scroll_wrapper",
-                        trigger: ".locations_copyright",
-                        start: "center bottom",
-                        onUpdate: self => {
-                            this.testing()
-                        }
-                     }
-                 })
-
-                tl.from('.image_left',{x: -100, autoAlpha: 0, duration: 1, ease: "power2.out"})
-                .from('.boot_image',{x: 100, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.4")
-                .from('.intro_title',{x: -200, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=1")
-                .from('.intro_p_1',{x: 200, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.8")
-                .from('.intro_p_2',{x: 200, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.8")
-                .from('.intro_p_3',{x: 200, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.8")
-
-                tl2.from('.services_title',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.75)"})
-                .from('.box_1',{x: 200, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
-                .from('.box_2',{x: 200, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
-                .from('.box_3',{x: 200, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.75)"},"-=0.8")
-                
-                tl3.from('.about',{y: -50, autoAlpha: 0, duration: 1.5, ease: "none"})
-                .from('#box_5',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
+                tl3.from('#box_5',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"})
                 .from('#box_4',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#box_3',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#box_2',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#box_1',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#title',{x: 100, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
-                .from('.about_info',{scale: 0, autoAlpha: 0, duration: 1.5, ease: "elastic.out(1, 1)"},"-=1.5")
-
-                tl4.from('.brands_shoe',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"})
-                .from('.brands_title',{x: 20, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.5")
-                .from('.shoes_container',{y: 100, autoAlpha: 0, duration: 1, ease: "power2.out"},"-=0.5")
-                
-                tl5.from('.locations_swirl',{y: -50, autoAlpha: 0, duration: 1.5, ease: "none"})
-                .from('.locations',{autoAlpha: 0, duration: 1.5, ease: "none"})
-                .from('.locations_map',{scale: 0, autoAlpha: 0, duration: 1.2, ease: "elastic.out(1, 0.75)"},"-=1")
-                .from('.logo_container',{y: 100, autoAlpha: 0, duration: 1.2, ease: "elastic.out(1, 1)"},"-=1")
+                tl5.from('.logo_container',{y: 100, autoAlpha: 0, duration: 1.2, ease: "elastic.out(1, 1)"})
                 
                 tl6.from('.contact_title',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.5)"})
                 .from('.contact_name',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
@@ -433,8 +371,6 @@ copyright******
                 .from('.contact_zip',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
                 .from('.contact_message',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
                 .from('.contact_btn',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
-                
-                tl7.from('.locations_copyright',{autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"})
              },
              testing(){
                 gsap.to("#blob2", {delay: 1.2, duration: 1.5, morphSVG:"#blob1"})
