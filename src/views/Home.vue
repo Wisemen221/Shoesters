@@ -26,9 +26,9 @@ hero******
             <div class="hero_content flex flex_dr_c">
                 <!-- contains the nav and image content -->
                 <div class="hero_nav">
-                    <h1 data-aos="fade-down" data-aos-duration="1000">Purveyors of Comfortable<br>Luxury Footwear</h1>
+                    <h1>Purveyors of Comfortable<br>Luxury Footwear</h1>
                     <!-- nav links for desktop only -->
-                    <nav data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300" class="hero_links flex flex_jc_c">
+                    <nav class="hero_links flex flex_jc_c">
                         <div @mouseleave="closeNav" @mouseenter="openNav" class="left_nav">
                             <ul>
                                 <li><a href="/">HOME</a></li>
@@ -43,9 +43,9 @@ hero******
                         </div>
                     </nav>
                     <!-- contact button -->
-                    <a data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600" class="hero_button" @click="goToContact" href="#">LET'S TALK</a>
+                    <a class="hero_button" @click="goToContact" href="#">LET'S TALK</a>
                 </div>
-                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="900" class="hero_image">
+                <div class="hero_image">
                     <!-- the boot -->
                     <img src="@/assets/images/png/shoe_11.png" aria-label="A single blue boot" alt="One single boot" loading="eager">
                     <div class="shadow"></div>
@@ -263,9 +263,6 @@ copyright******
     gsap.registerPlugin(ScrollToPlugin)
     gsap.registerPlugin(MorphSVGPlugin)
     gsap.registerPlugin(ScrollTrigger)
-    import AOS from 'aos'
-    import 'aos/dist/aos.css'
-    AOS.init()
 
     export default {
         name: 'Home',
@@ -350,13 +347,6 @@ copyright******
                         start: "center center"
                      }
                  })
-                 let tl6 = gsap.timeline({
-                     scrollTrigger: {
-                        scroller: ".scroll_wrapper",
-                        trigger: ".contact_title",
-                        start: "center bottom"
-                     }
-                 })
                 tl3.from('#box_5',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"})
                 .from('#box_4',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#box_3',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
@@ -364,13 +354,6 @@ copyright******
                 .from('#box_1',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 .from('#title',{x: 100, autoAlpha: 0, duration: 1, ease: "elastic.out(1.2, 0.75)"},"-=0.8")
                 tl5.from('.logo_container',{y: 100, autoAlpha: 0, duration: 1.2, ease: "elastic.out(1, 1)"})
-                
-                tl6.from('.contact_title',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 0.5)"})
-                .from('.contact_name',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
-                .from('.contact_email',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
-                .from('.contact_zip',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
-                .from('.contact_message',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
-                .from('.contact_btn',{scale: 0, autoAlpha: 0, duration: 1, ease: "elastic.out(1, 1)"},"-=0.8")
              },
              testing(){
                 gsap.to("#blob2", {delay: 1.2, duration: 1.5, morphSVG:"#blob1"})

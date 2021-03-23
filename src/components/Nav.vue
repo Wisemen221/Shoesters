@@ -7,17 +7,17 @@ header******
     <header class="header" :class="change_color ? 'no_background' : 'red_background'">
         <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="change_color ? 'big' : 'small'">
             <!-- logo image -->
-            <a href="/" data-aos="fade-right" data-aos-duration="1000" class="header_logo flex flex_ai_c">
+            <a href="/" class="header_logo flex flex_ai_c">
                 <img src="@/assets/images/svg/logo.svg" alt="Shoesters Logo">
             </a>
             <!-- mobile menu button -->
-            <a data-aos="fade-left" data-aos-duration="1000" href="#" ref="mobileToggle" @click="toggleOn" class="header_mobile_toggle">
+            <a href="#" ref="mobileToggle" @click="toggleOn" class="header_mobile_toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             <!-- social media buttons -->
-            <div data-aos="fade-left" data-aos-duration="1000" class="header_social_links">
+            <div class="header_social_links">
                 <a href="https://www.facebook.com/Shoesters/"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/shoesters1358/"><i class="fab fa-instagram"></i></a>
             </div>
@@ -28,9 +28,6 @@ header******
 
 <script>
     import { onUpdated, ref } from 'vue'
-    import AOS from 'aos'
-    import 'aos/dist/aos.css'
-    AOS.init()
 
     export default {
         props:['toggled','change_color','closing'],
