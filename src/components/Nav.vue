@@ -8,7 +8,7 @@ header******
         <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="change_color ? 'big' : 'small'">
             <!-- logo image -->
             <a href="/" class="header_logo flex flex_ai_c">
-                <img src="@/assets/images/svg/logo.svg" alt="Shoesters Logo">
+                <img aria-label="Shoesters Logo" src="@/assets/images/svg/logo.svg" loading="eager" alt="Shoesters Logo">
             </a>
             <!-- mobile menu button -->
             <a href="#" ref="mobileToggle" @click="toggleOn" class="header_mobile_toggle">
