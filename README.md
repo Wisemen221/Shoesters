@@ -1,26 +1,21 @@
-# shoesters
+# Retail Shoe Store
 
-This is my design for a local company's website called Shoesters.
-Their link: http://shoesters.com/
+## Visit Site
+You can check it out here :point_right: <a href="https://shoesters-d25da.web.app" target="_blank"> SITE </a>
 
-I have reached out to the company asking permision to create a design using the information from their website.
+## Details
+A simple modern redesign for a local retail shoe store. Unfortunately, the company has taken down their site. This project uses <a href="https://vuejs.org" target="_blank">Vue JS</a> and <a href="https://firebase.google.com" target="_blank">Google's Firebase</a>.
 
-I am not the owner of the information, photos, or company's property used in this design.
+## Installation
+Must install Vue JS locally from their offical site.
 
-## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+php artisan serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Enjoy :palm_tree:
+
